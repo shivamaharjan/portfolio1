@@ -1,0 +1,45 @@
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* ensure it's on top of other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(8, 232, 139); /* semi-transparent black background */
+  z-index: 999; /* ensure it's on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    margin-bottom: 10px;
+  }
+  
+  .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Adjust position as needed */
+    z-index: 1000; /* Ensure it's on top of the overlay */
+    cursor: pointer;
+  }
+  /* Define any other styles as needed */
+  

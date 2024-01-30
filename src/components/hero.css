@@ -1,73 +1,71 @@
 .hero-container {
-    text-align: center;
-    padding: 50px 0;
+  text-align: center;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.hero-image,
+.hero-text,
+.hero-buttons {
+  opacity: 0; /* Initially invisible */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  animation: fadeIn 1s ease forwards 1.5s;
+}
+
+.hero-text {
+  margin-top: 20px;
+  animation: slideInUp 1s ease forwards 2s;
+}
+
+.hero-buttons {
+  animation: slideInUp 1s ease forwards 3s;
+}
+
+
+.hero-button:hover {
+  background-color: #2ecc71;
+  border-color: white;
+  color: white;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #2ecc71;
+}
+
+/* Define your animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 20px;
+  to {
+    opacity: 1;
   }
-  
-  .hero-image {
-    border-radius: 50%;
-    max-width: 200px;
-    animation: fadeIn 1s ease 0.5s;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  .hero-text {
-    margin-top: 20px;
-    animation: slideInUp 1s ease 1s;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .hero-buttons {
-    animation: slideInUp 1s ease 1.5s;
-  }
-  
-  .hero-button {
-    background-color: #ecf0f1;
-    border: 1px solid #ecf0f1;
-    color: black;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  }
-  
-  .hero-button:hover {
-    background-color: #2ecc71;
-    border-color: white;
-    color: white;
-  }
-  
-  .social-icon {
-    font-size: 1.5rem;
-    margin: 0 5px;
-    transition: transform 0.3s, color 0.3s;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.2);
-    color: #2ecc71;
-  }
-  
-  /* Define your animation keyframes */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}
